@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;800&display=swap');
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Ajust box sizing */
+*, *::after, *::before{
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Remove margin  */
+html, body{
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #1F2937;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#root{
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 10px 1px yellow;
+  color: #10B981;
+  font-size: 1.3rem;
+  font-family: 'Karla', sans-serif;
+  width: auto;
+  max-width: 60%;
+  margin-top: 2%;
+  min-height: 30%;
+}
+
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.init{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.config{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.config-btn{
+  margin: 0 2rem;
+}
+
+.config-btn p{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+}
+
+.config-btn button{
+  padding: 0.5em 1em;
+  margin-left: 1rem;
+  font-size: large;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.config-btn button:hover{
+  color:#10B981;
+  transform: scale(0.95);
+}
+.config-btn button:focus{
+  color:red;
+}
+
+.quantity{
+  margin-top: 1rem;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity label{
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.quantity input[type="number"]{
+  max-width: 40%;
+  padding: 1em;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 3%;
+}
+
+.result{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;;
+  gap: 1rem;
+  box-shadow: 3px 3px 3px 3px black;
+  border-radius: 10px;
+  padding: 1rem 0;
+}
+
+.result span{
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: oblique;
+}
+
+.btn{
+  padding: 1rem 2rem;
+  background-color: #4D5B9E;
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  align-self: center;
+
+}
+
+.btn:hover,
+.btn:focus{
+  transform: scale(0.95);
+  color: black;
+}
+
+.question p {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  color: #293264;
+  line-height: 1.5em;
+}
+
+.answers{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.answers button {
+  flex-grow: 1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 1px solid #293264;
+  color: #293264;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5em 1.2em;
+  font-size: 1.1rem;
+}
+
+.answers button:hover,
+.answers button:focus{
+  cursor: pointer;
+  transform: scale(0.95);
+  font-weight: bold;
+  background-color: #7a86bd;
+}
+
+.answers{
+  display:flex;
+}
+
+.choosed{
+  background-color: #D6DBF5;
+}
+
+.wrong {
+  background-color:#F8BCBC;
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.correct{
+  background-color: #94D7A2;
+  transform: scale(1.1);
+}
+
+footer{
+ margin-top: 1rem;
+ font-style: italic;
+ color: aliceblue;
+ #git{      
+     font-size: 1rem;
+     text-decoration: none;
+     color: inherit;
+ }
+}
+
+@media(max-width: 768px){
+  #root{
+    width: 90%;
+  }
+  .answers{
+    flex-wrap: wrap;
+  }
+  .answers button{
+    flex-grow: 1;
+  }
+  .config-btn button{
+    display: block;
+    margin-bottom: 5px;
+  }
+  #config-newquiz{
+    width: 100%;
+  }
+  div.config{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+  }
+  div.config-btn{
+    width: 60%;
+    padding: 0;
+    margin-left: 3.5rem;
+    display:grid;
+  } 
+  div.quantity{
+    width: 100%;
+    margin-left: 2rem ;
+    padding: 0;
+  }
+  div.quantity input[type="number"]{
+    margin-top: 1em;
+  }
+  
+}
+
+@media(max-width: 426px){
+  .btn
+  {
+    display: block;
+    width: 100%;;
+  }
+
+  .answers button{
+    display:block;
+    width: 100%;
+  }
+
+  .answers button:hover,
+  .answers button:focus{
+    transform: scale(1);
+    font-weight: 1;
+  }
+
+  div.result{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+  }
+}

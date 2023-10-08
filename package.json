@@ -1,0 +1,29 @@
+{
+  "name": "quizz",
+  "author": "mmerga",
+  "description": "quizz",
+  "keywords": [
+    "scrimba",
+    "learning",
+    "frontend",
+    "backend"
+  ],
+  "dependencies": {
+    "he": "^1.2.0",
+    "react": "^18.0.1",
+    "react-dom": "^18.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@vitejs/plugin-react": "*",
+    "vite": "latest"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
